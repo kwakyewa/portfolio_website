@@ -1,3 +1,24 @@
+const CONFIRM_MESSAGE = document.querySelector(".thank-you-message");
+const FORM_BODY = document.querySelector(".form-body");
+const SEND_BUTTON = document.querySelector(".send-button .btn-primary");
+
+//When javascript is enabled and the send button hasn't been pressed- What happens when the page is loaded in the browser initially.
+FORM_BODY.classList.remove("hide");
+CONFIRM_MESSAGE.classList.add("hide");
+
+
+//function to toggle the form on and off
+function reveal(e){
+	e.preventDefault();
+	FORM_BODY.classList.toggle("hide");
+	CONFIRM_MESSAGE.classList.toggle("hide");
+}
+
+
+SEND_BUTTON.addEventListener("click", reveal, false);
+
+
+
 ;(function () {
 	
 	'use strict';
